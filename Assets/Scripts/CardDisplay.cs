@@ -46,16 +46,19 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     // Start is called before the first frame update
     void Start()
     {
-        if (activeCard != null)
+        position = defaultPosition = transform.position;
+        scale = defaultScale = transform.localScale;
+
+        if (activeCard == null)
         {
-            UpdateText();
+            activeCard = cards[Random.Range(1, cards.Count)];
         }
+        UpdateText();
     }
 
     void UpdateText()
     {
-        position = defaultPosition = transform.position;
-        scale = defaultScale = transform.localScale;
+
         nameText.text = activeCard.Name;
         descriptionText.text = activeCard.Description;
         artworkImage.sprite = activeCard.Artwork;
