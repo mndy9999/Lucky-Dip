@@ -55,8 +55,6 @@ public class Pathfinding : MonoBehaviour
 				node.HighlightNode();
 				node.Visited = false;
 			}
-
-			//targetLocation = path[path.Count-1];
 		}
 	}
 
@@ -136,8 +134,8 @@ public class Pathfinding : MonoBehaviour
 		}
 
 		path.Reverse();
-		if(path.Count > 0 && path.Count > playerStats.MovesLeft)
-			path = path.GetRange(0, playerStats.MovesLeft);
+		if(path.Count > 0 && path.Count > PlayerStats.Instance.MovesLeft)
+			path = path.GetRange(0, PlayerStats.Instance.MovesLeft);
 		return path;
 	}
 
@@ -149,11 +147,17 @@ public class Pathfinding : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
 		{
+			var mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
 			if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Tile"))
 			{
 				TargetLocation = hit.collider.gameObject.GetComponent<Node>();
 			}
+			else if(!Physics.CheckSphere(hit.point, 5, 1 << 8))
+			{		
+				TargetLocation = player.CurrentLocation;
+			}
 		}
+
 	}
 
 	public void Start()

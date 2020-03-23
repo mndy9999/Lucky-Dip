@@ -6,14 +6,13 @@ public class GameplayManager : MonoBehaviour
 {
 
     public GameObject canvas;
-    public PlayerStats playerStats;
 
     private int mPlayerMoves;
     public int PlayerMoves
     {
         get
         {
-            return playerStats.MovesLeft;
+            return PlayerStats.Instance.MovesLeft;
         }
         set
         {
@@ -36,7 +35,7 @@ public class GameplayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMoves = playerStats.MovesLeft;
+        PlayerMoves = PlayerStats.Instance.MovesLeft;
     }
 
     public void ShowHideCanvas(int moves = 0)
@@ -50,7 +49,7 @@ public class GameplayManager : MonoBehaviour
         canvas.SetActive(!canvas.activeSelf);
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
         if(moves >= 0)
-            playerStats.MovesLeft = moves;
+            PlayerStats.Instance.MovesLeft = moves;
     }
 
 }

@@ -15,5 +15,5 @@ public class Card : ScriptableObject
 
     public CardTypes CardType;
 
-    public enum CardTypes { Attack, Ability, Healing, RideOrDie};
+    public enum CardTypes { Attack, Ability, Healing, RideOrDie, Unknown};
 }

@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 73069599}
   - component: {fileID: 73069598}
   - component: {fileID: 73069601}
+  - component: {fileID: 73069602}
   m_Layer: 8
   m_Name: Enemy Tile (12)
   m_TagString: Untagged
@@ -342,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73069596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.4, y: 0, z: -5}
+  m_LocalPosition: {x: -14.4, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -423,7 +424,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &73069602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73069596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &123246007
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +530,7 @@ GameObject:
   - component: {fileID: 186758405}
   - component: {fileID: 186758404}
   - component: {fileID: 186758407}
+  - component: {fileID: 186758408}
   m_Layer: 8
   m_Name: Enemy Tile (10)
   m_TagString: Untagged
@@ -529,7 +546,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186758402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25, y: 0, z: 15}
+  m_LocalPosition: {x: -15, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -610,7 +627,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &186758408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186758402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &188634202
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +656,7 @@ GameObject:
   - component: {fileID: 188634205}
   - component: {fileID: 188634204}
   - component: {fileID: 188634207}
+  - component: {fileID: 188634208}
   m_Layer: 8
   m_Name: Enemy Tile (9)
   m_TagString: Untagged
@@ -639,7 +672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188634202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 5}
+  m_LocalPosition: {x: 15, y: 0, z: 5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -720,7 +753,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &188634208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188634202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &253682498
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,6 +782,7 @@ GameObject:
   - component: {fileID: 253682501}
   - component: {fileID: 253682500}
   - component: {fileID: 253682503}
+  - component: {fileID: 253682504}
   m_Layer: 8
   m_Name: Enemy Tile
   m_TagString: Untagged
@@ -749,7 +798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253682498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 15}
+  m_LocalPosition: {x: -5, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -830,7 +879,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &253682504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253682498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &276477609
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +981,7 @@ GameObject:
   - component: {fileID: 291483512}
   - component: {fileID: 291483511}
   - component: {fileID: 291483514}
+  - component: {fileID: 291483515}
   m_Layer: 8
   m_Name: Enemy Tile (4)
   m_TagString: Untagged
@@ -932,7 +997,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291483509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: -5}
+  m_LocalPosition: {x: -5, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1013,7 +1078,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &291483515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291483509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &300557920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1107,7 @@ GameObject:
   - component: {fileID: 300557923}
   - component: {fileID: 300557922}
   - component: {fileID: 300557925}
+  - component: {fileID: 300557926}
   m_Layer: 8
   m_Name: Enemy Tile (11)
   m_TagString: Untagged
@@ -1042,7 +1123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300557920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 0, z: 15}
+  m_LocalPosition: {x: -25, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1123,7 +1204,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &300557926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300557920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &302195170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1233,7 @@ GameObject:
   - component: {fileID: 302195173}
   - component: {fileID: 302195172}
   - component: {fileID: 302195175}
+  - component: {fileID: 302195176}
   m_Layer: 8
   m_Name: Enemy Tile (26)
   m_TagString: Untagged
@@ -1152,7 +1249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302195170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: -15}
+  m_LocalPosition: {x: 35, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1233,7 +1330,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &302195176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302195170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &319042427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,8 +1378,8 @@ RectTransform:
   m_Children:
   - {fileID: 1461857457}
   - {fileID: 984767057}
-  - {fileID: 764207001}
   - {fileID: 1961563207}
+  - {fileID: 1733344765}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1327,7 +1439,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1349,6 +1461,7 @@ GameObject:
   - component: {fileID: 401142478}
   - component: {fileID: 401142477}
   - component: {fileID: 401142480}
+  - component: {fileID: 401142481}
   m_Layer: 8
   m_Name: Enemy Tile (23)
   m_TagString: Untagged
@@ -1364,7 +1477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401142475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: 5}
+  m_LocalPosition: {x: 55, y: 0, z: 5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1445,7 +1558,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &401142481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401142475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &544774735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1587,7 @@ GameObject:
   - component: {fileID: 544774738}
   - component: {fileID: 544774737}
   - component: {fileID: 544774740}
+  - component: {fileID: 544774741}
   m_Layer: 8
   m_Name: Enemy Tile (3)
   m_TagString: Untagged
@@ -1474,7 +1603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544774735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 5}
+  m_LocalPosition: {x: -5, y: 0, z: 5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1555,7 +1684,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &544774741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544774735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &608353694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1713,7 @@ GameObject:
   - component: {fileID: 608353697}
   - component: {fileID: 608353696}
   - component: {fileID: 608353699}
+  - component: {fileID: 608353700}
   m_Layer: 8
   m_Name: Enemy Tile (28)
   m_TagString: Untagged
@@ -1584,7 +1729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608353694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45, y: 0, z: 5}
+  m_LocalPosition: {x: -35, y: 0, z: 5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1665,7 +1810,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &608353700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608353694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &615642505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1967,7 @@ GameObject:
   - component: {fileID: 629566262}
   - component: {fileID: 629566261}
   - component: {fileID: 629566264}
+  - component: {fileID: 629566265}
   m_Layer: 8
   m_Name: Enemy Tile (22)
   m_TagString: Untagged
@@ -1822,7 +1983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629566259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: -5}
+  m_LocalPosition: {x: 55, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -1903,7 +2064,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &629566265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629566259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &632785682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2248,7 @@ GameObject:
   - component: {fileID: 640245811}
   - component: {fileID: 640245810}
   - component: {fileID: 640245813}
+  - component: {fileID: 640245814}
   m_Layer: 8
   m_Name: Enemy Tile (16)
   m_TagString: Untagged
@@ -2087,7 +2264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640245808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 15}
+  m_LocalPosition: {x: 35, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -2168,7 +2345,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &640245814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640245808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &646210844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2422,7 @@ Transform:
   - {fileID: 1577805690}
   - {fileID: 608353695}
   - {fileID: 1492922824}
+  - {fileID: 976520031}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2246,7 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 755271115}
-  playerStats: {fileID: 755271120}
+  playerStats: {fileID: 0}
   path:
   - {fileID: 942517937}
 --- !u!1 &661831012
@@ -2390,6 +2583,7 @@ GameObject:
   - component: {fileID: 675941092}
   - component: {fileID: 675941091}
   - component: {fileID: 675941094}
+  - component: {fileID: 675941095}
   m_Layer: 8
   m_Name: Enemy Tile (15)
   m_TagString: Untagged
@@ -2405,7 +2599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675941089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45, y: 0, z: -15}
+  m_LocalPosition: {x: -35, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -2486,7 +2680,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &675941095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675941089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &699345673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,6 +2929,7 @@ GameObject:
   - component: {fileID: 709632760}
   - component: {fileID: 709632759}
   - component: {fileID: 709632762}
+  - component: {fileID: 709632763}
   m_Layer: 8
   m_Name: Enemy Tile (21)
   m_TagString: Untagged
@@ -2735,7 +2945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709632757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: -5}
+  m_LocalPosition: {x: 35, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -2816,7 +3026,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &709632763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709632757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &742245295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,6 +3092,7 @@ GameObject:
   - component: {fileID: 743618277}
   - component: {fileID: 743618276}
   - component: {fileID: 743618279}
+  - component: {fileID: 743618280}
   m_Layer: 8
   m_Name: Enemy Tile (18)
   m_TagString: Untagged
@@ -2882,7 +3108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743618274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: 15}
+  m_LocalPosition: {x: 55, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -2963,7 +3189,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &743618280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743618274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &755271114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,7 +3218,6 @@ GameObject:
   - component: {fileID: 755271117}
   - component: {fileID: 755271116}
   - component: {fileID: 755271115}
-  - component: {fileID: 755271120}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2998,7 +3238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathFinder: {fileID: 646210847}
-  playerStats: {fileID: 0}
 --- !u!65 &755271116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3008,7 +3247,7 @@ BoxCollider:
   m_GameObject: {fileID: 755271114}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3067,30 +3306,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755271114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 2, z: 15}
+  m_LocalPosition: {x: 24.5, y: 2, z: 14.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &755271120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755271114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b1d0e09c9148c4482361ce0ca575f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovesLeft: 1000
-  AttackPower: 0
-  AbilityPower: 0
-  HealingPower: 0
-  MaxHealth: 0
-  UnassignedPoints: 10
 --- !u!1 &761119472
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,17 +3466,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764207000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 0.8, z: 1}
   m_Children: []
-  m_Father: {fileID: 319042428}
-  m_RootOrder: 2
+  m_Father: {fileID: 976520031}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -450, y: -112}
+  m_AnchoredPosition: {x: 28.66, y: 4.9}
+  m_SizeDelta: {x: -383.65, y: -112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764207002
 MonoBehaviour:
@@ -3477,6 +3698,7 @@ GameObject:
   - component: {fileID: 811582856}
   - component: {fileID: 811582855}
   - component: {fileID: 811582858}
+  - component: {fileID: 811582859}
   m_Layer: 8
   m_Name: Enemy Tile (8)
   m_TagString: Untagged
@@ -3492,7 +3714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811582853}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: -5}
+  m_LocalPosition: {x: 15, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -3573,7 +3795,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &811582859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811582853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &942517932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,6 +3824,7 @@ GameObject:
   - component: {fileID: 942517935}
   - component: {fileID: 942517934}
   - component: {fileID: 942517937}
+  - component: {fileID: 942517938}
   m_Layer: 8
   m_Name: Start
   m_TagString: Untagged
@@ -3602,7 +3840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942517932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 15}
+  m_LocalPosition: {x: 24.999998, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -3683,7 +3921,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &942517938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942517932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3767,6 +4020,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &976520030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 976520031}
+  - component: {fileID: 976520034}
+  - component: {fileID: 976520033}
+  - component: {fileID: 976520032}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &976520031
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976520030}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 764207001}
+  m_Father: {fileID: 646210845}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -19, y: 0}
+  m_SizeDelta: {x: 491.2, y: 174.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &976520032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976520030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &976520033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976520030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &976520034
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976520030}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &984767056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3908,6 +4260,7 @@ GameObject:
   - component: {fileID: 1015255360}
   - component: {fileID: 1015255359}
   - component: {fileID: 1015255362}
+  - component: {fileID: 1015255363}
   m_Layer: 8
   m_Name: Enemy Tile (2)
   m_TagString: Untagged
@@ -3923,7 +4276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015255357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 15}
+  m_LocalPosition: {x: 15, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -4004,7 +4357,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1015255363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015255357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1048528269
 GameObject:
   m_ObjectHideFlags: 0
@@ -4018,6 +4386,7 @@ GameObject:
   - component: {fileID: 1048528272}
   - component: {fileID: 1048528271}
   - component: {fileID: 1048528274}
+  - component: {fileID: 1048528275}
   m_Layer: 8
   m_Name: Enemy Tile (24)
   m_TagString: Untagged
@@ -4033,7 +4402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048528269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0, z: -15}
+  m_LocalPosition: {x: 55, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -4114,7 +4483,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1048528275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048528269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1078398280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,6 +4804,7 @@ GameObject:
   - component: {fileID: 1209869663}
   - component: {fileID: 1209869662}
   - component: {fileID: 1209869665}
+  - component: {fileID: 1209869666}
   m_Layer: 8
   m_Name: Enemy Tile (1)
   m_TagString: Untagged
@@ -4435,7 +4820,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209869660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 15}
+  m_LocalPosition: {x: 5, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -4516,7 +4901,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1209869666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209869660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1236534853
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,6 +5502,7 @@ GameObject:
   - component: {fileID: 1307139742}
   - component: {fileID: 1307139741}
   - component: {fileID: 1307139744}
+  - component: {fileID: 1307139745}
   m_Layer: 8
   m_Name: Enemy Tile (6)
   m_TagString: Untagged
@@ -5117,7 +5518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307139739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -5}
+  m_LocalPosition: {x: 5, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -5198,7 +5599,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1307139745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307139739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1335489330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,7 +5902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1461857456}
-  playerStats: {fileID: 755271120}
 --- !u!1 &1437654563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5500,6 +5915,7 @@ GameObject:
   - component: {fileID: 1437654566}
   - component: {fileID: 1437654565}
   - component: {fileID: 1437654568}
+  - component: {fileID: 1437654569}
   m_Layer: 8
   m_Name: Enemy Tile (20)
   m_TagString: Untagged
@@ -5515,7 +5931,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437654563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.6, y: 0, z: -5}
+  m_LocalPosition: {x: 25.6, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -5596,7 +6012,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1437654569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437654563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &1461857456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,6 +6078,7 @@ GameObject:
   - component: {fileID: 1492922826}
   - component: {fileID: 1492922825}
   - component: {fileID: 1492922828}
+  - component: {fileID: 1492922829}
   m_Layer: 8
   m_Name: Enemy Tile (29)
   m_TagString: Untagged
@@ -5662,7 +6094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492922823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45, y: 0, z: -5}
+  m_LocalPosition: {x: -35, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -5743,7 +6175,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1492922829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492922823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1508504258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,6 +6281,7 @@ GameObject:
   - component: {fileID: 1530412380}
   - component: {fileID: 1530412379}
   - component: {fileID: 1530412382}
+  - component: {fileID: 1530412383}
   m_Layer: 8
   m_Name: Enemy Tile (5)
   m_TagString: Untagged
@@ -5849,7 +6297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530412377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: -15}
+  m_LocalPosition: {x: -5, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -5930,7 +6378,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1530412383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530412377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1577805689
 GameObject:
   m_ObjectHideFlags: 0
@@ -5944,6 +6407,7 @@ GameObject:
   - component: {fileID: 1577805692}
   - component: {fileID: 1577805691}
   - component: {fileID: 1577805694}
+  - component: {fileID: 1577805695}
   m_Layer: 8
   m_Name: Enemy Tile (27)
   m_TagString: Untagged
@@ -5959,7 +6423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577805689}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45, y: 0, z: 15}
+  m_LocalPosition: {x: -35, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6040,7 +6504,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1577805695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577805689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &1604573463
 GameObject:
   m_ObjectHideFlags: 0
@@ -6131,6 +6610,7 @@ GameObject:
   - component: {fileID: 1612736821}
   - component: {fileID: 1612736820}
   - component: {fileID: 1612736823}
+  - component: {fileID: 1612736824}
   m_Layer: 8
   m_Name: Enemy Tile (7)
   m_TagString: Untagged
@@ -6146,7 +6626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612736818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: -15}
+  m_LocalPosition: {x: 15, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6227,7 +6707,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1612736824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612736818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &1629582324
 GameObject:
   m_ObjectHideFlags: 0
@@ -6406,6 +6901,7 @@ GameObject:
   - component: {fileID: 1639767303}
   - component: {fileID: 1639767302}
   - component: {fileID: 1639767305}
+  - component: {fileID: 1639767306}
   m_Layer: 8
   m_Name: Enemy Tile (17)
   m_TagString: Untagged
@@ -6421,7 +6917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639767300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 0, z: -5}
+  m_LocalPosition: {x: 45, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6502,7 +6998,34 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1639767306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639767300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
+--- !u!1 &1733344764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8735921878248096967, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8735921877766781243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1733344765 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8735921877766781243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804332495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6516,6 +7039,7 @@ GameObject:
   - component: {fileID: 1804332498}
   - component: {fileID: 1804332497}
   - component: {fileID: 1804332500}
+  - component: {fileID: 1804332501}
   m_Layer: 8
   m_Name: Finish
   m_TagString: Untagged
@@ -6531,7 +7055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804332495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: -15}
+  m_LocalPosition: {x: 24.999998, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6612,7 +7136,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1804332501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804332495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1844674450
 GameObject:
   m_ObjectHideFlags: 0
@@ -6626,6 +7165,7 @@ GameObject:
   - component: {fileID: 1844674453}
   - component: {fileID: 1844674452}
   - component: {fileID: 1844674455}
+  - component: {fileID: 1844674456}
   m_Layer: 8
   m_Name: Enemy Tile (14)
   m_TagString: Untagged
@@ -6641,7 +7181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844674450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 0, z: -15}
+  m_LocalPosition: {x: -25, y: 0, z: -15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6722,7 +7262,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1844674456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844674450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 1
 --- !u!1 &1877204368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6864,6 +7419,7 @@ GameObject:
   - component: {fileID: 1888721018}
   - component: {fileID: 1888721017}
   - component: {fileID: 1888721020}
+  - component: {fileID: 1888721021}
   m_Layer: 8
   m_Name: Enemy Tile (25)
   m_TagString: Untagged
@@ -6879,7 +7435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888721015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: 0, z: 15}
+  m_LocalPosition: {x: 45, y: 0, z: 15}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -6960,7 +7516,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1888721021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888721015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1935775621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6974,6 +7545,7 @@ GameObject:
   - component: {fileID: 1935775624}
   - component: {fileID: 1935775623}
   - component: {fileID: 1935775626}
+  - component: {fileID: 1935775627}
   m_Layer: 8
   m_Name: Enemy Tile (19)
   m_TagString: Untagged
@@ -6989,7 +7561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935775621}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 5}
+  m_LocalPosition: {x: 35, y: 0, z: 5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -7070,7 +7642,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &1935775627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935775621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &1961563206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7110,7 +7697,7 @@ RectTransform:
   - {fileID: 810626752}
   - {fileID: 1107122090}
   m_Father: {fileID: 319042428}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7129,7 +7716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da76e07c16a584a8d3df76243e13d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 755271120}
   AttackPowerText: {fileID: 1335489332}
   AbilityPowerText: {fileID: 1267736727}
   HealingPowerText: {fileID: 56390758}
@@ -7148,6 +7734,7 @@ GameObject:
   - component: {fileID: 2076354298}
   - component: {fileID: 2076354297}
   - component: {fileID: 2076354300}
+  - component: {fileID: 2076354301}
   m_Layer: 8
   m_Name: Enemy Tile (13)
   m_TagString: Untagged
@@ -7163,7 +7750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076354295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 0, z: -5}
+  m_LocalPosition: {x: -25, y: 0, z: -5}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 646210845}
@@ -7244,7 +7831,22 @@ MonoBehaviour:
   gCost: 0
   hCost: 0
   parent: {fileID: 0}
+  SteppedOn: 0
   WorldPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &2076354301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076354295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8faa424e1abd2f4c8698d7af32dc795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileCardUI: {fileID: 1733344764}
+  enemyType: 0
 --- !u!1 &2082722125
 GameObject:
   m_ObjectHideFlags: 0
@@ -7411,6 +8013,82 @@ RectTransform:
   m_AnchoredPosition: {x: 141.94, y: -0.0000019073}
   m_SizeDelta: {x: 65.122, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2089478679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089478681}
+  - component: {fileID: 2089478680}
+  - component: {fileID: 2089478682}
+  - component: {fileID: 2089478683}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2089478680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089478679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b1d0e09c9148c4482361ce0ca575f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovesLeft: 0
+  AttackPower: 0
+  AbilityPower: 0
+  HealingPower: 0
+  MaxHealth: 0
+  UnassignedPoints: 0
+--- !u!4 &2089478681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089478679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.785597, y: 0.65317947, z: 2.7664137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2089478682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089478679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1875236368079443a42df4b9ba834c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2089478683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089478679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc40a9c83ccaff64aa09ea47d7d6ae79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTilePosition: {fileID: 0}
 --- !u!1 &2130837805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7539,3 +8217,156 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130837805}
   m_CullTransparentMesh: 0
+--- !u!1001 &8735921877766781243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 319042428}
+    m_Modifications:
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: cards.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: cards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 61ff1efe497b2e9408e587b0231daeae,
+        type: 2}
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: cards.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7dd311a12019e894aa7ed679a72ca173,
+        type: 2}
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: cards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: aac7164b9a9c822448c8f43886d3705c,
+        type: 2}
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: cards.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: ff9dcf57cf53ac2409b5c4bc15f84dba,
+        type: 2}
+    - target: {fileID: 8735921878248096965, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: isInWorldScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 122.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 165.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 253
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096966, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735921878248096967, guid: 839ceba0efe9d83489b8e21dcb8e571a,
+        type: 3}
+      propertyPath: m_Name
+      value: TileCard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 839ceba0efe9d83489b8e21dcb8e571a, type: 3}

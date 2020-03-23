@@ -5,22 +5,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public Pathfinding pathFinder;
-    public PlayerStats playerStats;
 
     List<Node> currentPath = new List<Node>();
 
     private Vector3 newPos;
     private Vector3 targetPos;
-    private Vector3 rayOffset = new Vector3(0, 1, 0);
 
     public Node TargetLocation
     {
         get
         {
             RaycastHit hit;
-            if (Physics.Raycast(targetPos + rayOffset, Vector3.down, out hit, 1 << LayerMask.NameToLayer("Tile")))
+            if (Physics.Raycast(targetPos + Vector3.up, Vector3.down, out hit, 1 << LayerMask.NameToLayer("Tile")))
                 return hit.transform.gameObject.GetComponent<Node>();
             else return null;
         }
@@ -31,8 +28,12 @@ public class PlayerMovement : MonoBehaviour
         get
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position + rayOffset, Vector3.down, out hit, 1 << LayerMask.NameToLayer("Tile")))
+            if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1 << LayerMask.NameToLayer("Tile")))
+            {
+                hit.transform.gameObject.GetComponent<Node>().SteppedOn = true;
+                GameManager.Instance.PlayerTilePosition = hit.transform.gameObject.GetComponent<Node>();
                 return hit.transform.gameObject.GetComponent<Node>();
+            }
             else return null;
         }
     }
@@ -48,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        playerStats = GetComponent<PlayerStats>();
         newPos = transform.position;
         targetPos = transform.position;
     }
@@ -62,10 +62,10 @@ public class PlayerMovement : MonoBehaviour
             newPos = currentPath[0].WorldPosition;
             newPos.y = transform.position.y;
             currentPath.RemoveAt(0);
-            playerStats.MovesLeft--;
+            PlayerStats.Instance.MovesLeft--;
         }
 
-        if (Input.GetMouseButton(1) && !IsMoving)
+        if (Input.GetMouseButton(1) && !IsMoving && PlayerStats.Instance.MovesLeft > 0)
         {
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))

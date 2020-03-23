@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class CharacterStatsUI : MonoBehaviour
 {
-    public PlayerStats playerStats;
 
     public TextMeshProUGUI AttackPowerText;
     public TextMeshProUGUI AbilityPowerText;
@@ -29,18 +28,6 @@ public class CharacterStatsUI : MonoBehaviour
     private const string healthText = "Max Health: \n{0}";
     private const string pointsText = "Unassigned Points: {0}";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnEnable()
     {
         UpdateValues();
@@ -48,17 +35,17 @@ public class CharacterStatsUI : MonoBehaviour
 
     void UpdateValues()
     {
-        AttackPowerText.text = string.Format(attackText, playerStats.AttackPower.ToString());
-        AbilityPowerText.text = string.Format(abilityText, playerStats.AbilityPower.ToString());
-        HealingPowerText.text = string.Format(healingText, playerStats.HealingPower.ToString());
-        MaxHealthText.text = string.Format(healthText, playerStats.MaxHealth.ToString());
-        UnassignedPointsText.text = string.Format(pointsText, playerStats.UnassignedPoints.ToString());
+        AttackPowerText.text = string.Format(attackText, PlayerStats.Instance.AttackPower.ToString());
+        AbilityPowerText.text = string.Format(abilityText, PlayerStats.Instance.AbilityPower.ToString());
+        HealingPowerText.text = string.Format(healingText, PlayerStats.Instance.HealingPower.ToString());
+        MaxHealthText.text = string.Format(healthText, PlayerStats.Instance.MaxHealth.ToString());
+        UnassignedPointsText.text = string.Format(pointsText, PlayerStats.Instance.UnassignedPoints.ToString());
 
-        tempAttack = playerStats.AttackPower;
-        tempAbility = playerStats.AbilityPower;
-        tempHealing = playerStats.HealingPower;
-        tempHealth = playerStats.MaxHealth;
-        tempPoints = playerStats.UnassignedPoints;
+        tempAttack = PlayerStats.Instance.AttackPower;
+        tempAbility = PlayerStats.Instance.AbilityPower;
+        tempHealing = PlayerStats.Instance.HealingPower;
+        tempHealth = PlayerStats.Instance.MaxHealth;
+        tempPoints = PlayerStats.Instance.UnassignedPoints;
     }
 
     void UpdateTempValues()
@@ -72,11 +59,11 @@ public class CharacterStatsUI : MonoBehaviour
 
     public void UpdatePlayerStats()
     {
-        playerStats.AttackPower = tempAttack;
-        playerStats.AbilityPower = tempAbility;
-        playerStats.HealingPower = tempHealing;
-        playerStats.MaxHealth = tempHealth;
-        playerStats.UnassignedPoints = tempPoints;
+        PlayerStats.Instance.AttackPower = tempAttack;
+        PlayerStats.Instance.AbilityPower = tempAbility;
+        PlayerStats.Instance.HealingPower = tempHealing;
+        PlayerStats.Instance.MaxHealth = tempHealth;
+        PlayerStats.Instance.UnassignedPoints = tempPoints;
     }
 
     public void IncreaseDecreaseAttack(bool increase)
@@ -86,7 +73,7 @@ public class CharacterStatsUI : MonoBehaviour
             tempAttack += 1;
             tempPoints--;
         }
-        else if (!increase && tempAttack > playerStats.AttackPower)
+        else if (!increase && tempAttack > PlayerStats.Instance.AttackPower)
         {
             tempAttack -= 1;
             tempPoints++;
@@ -101,7 +88,7 @@ public class CharacterStatsUI : MonoBehaviour
             tempAbility += 1;
             tempPoints--;
         }
-        else if (!increase && tempAbility > playerStats.AbilityPower)
+        else if (!increase && tempAbility > PlayerStats.Instance.AbilityPower)
         {
             tempAbility -= 1;
             tempPoints++;
@@ -116,7 +103,7 @@ public class CharacterStatsUI : MonoBehaviour
             tempHealing += 1;
             tempPoints--;
         }
-        else if (!increase && tempHealing > playerStats.HealingPower)
+        else if (!increase && tempHealing > PlayerStats.Instance.HealingPower)
         {
             tempHealing -= 1;
             tempPoints++;
@@ -131,7 +118,7 @@ public class CharacterStatsUI : MonoBehaviour
             tempHealth += 10;
             tempPoints--;
         }
-        else if (!increase && tempHealth > playerStats.MaxHealth)
+        else if (!increase && tempHealth > PlayerStats.Instance.MaxHealth)
         {
             tempHealth -= 10;
             tempPoints++;

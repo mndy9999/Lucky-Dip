@@ -26,6 +26,8 @@ public class Node : MonoBehaviour
 		}
 	}
 
+	public bool SteppedOn;
+
 	public Vector3 WorldPosition;
 
 	private Color baseColour;

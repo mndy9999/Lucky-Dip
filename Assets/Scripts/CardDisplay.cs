@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Card card;
+    public List<Card> cards;
+    public bool isInWorldScene;
+    public EnemyType EnemyType
+    {
+        set
+        {
+            activeCard = cards[(int)value];
+            UpdateText();
+        }
+    }
+
+    private Card activeCard;
 
     public Text nameText;
     public Text descriptionText;
@@ -37,14 +46,23 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     // Start is called before the first frame update
     void Start()
     {
+        if (activeCard != null)
+        {
+            UpdateText();
+        }
+    }
+
+    void UpdateText()
+    {
         position = defaultPosition = transform.position;
         scale = defaultScale = transform.localScale;
-        nameText.text = card.Name;
-        descriptionText.text = card.Description;
-        artworkImage.sprite = card.Artwork;
+        nameText.text = activeCard.Name;
+        descriptionText.text = activeCard.Description;
+        artworkImage.sprite = activeCard.Artwork;
 
         string desc;
-        switch (card.CardType) {
+        switch (activeCard.CardType)
+        {
             case Card.CardTypes.Attack:
                 desc = "Roll {0}-{1}: Deal {2} Attack Damage";
                 break;
@@ -60,15 +78,16 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
 
 
-        RollLow.text = string.Format(desc, "1", "2", card.RollLow.ToString());
-        RollMed.text = string.Format(desc, "3", "4", card.RollMed.ToString());
-        RollHigh.text = string.Format(desc, "5", "6", card.RollHigh.ToString());
+        RollLow.text = string.Format(desc, "1", "2", activeCard.RollLow.ToString());
+        RollMed.text = string.Format(desc, "3", "4", activeCard.RollMed.ToString());
+        RollHigh.text = string.Format(desc, "5", "6", activeCard.RollHigh.ToString());
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, position, 2);
+        if(!isInWorldScene)
+            transform.position = Vector3.MoveTowards(transform.position, position, 2);
 
     }
 }
