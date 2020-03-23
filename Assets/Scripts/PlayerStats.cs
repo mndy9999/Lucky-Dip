@@ -6,6 +6,14 @@ public class PlayerStats : MonoBehaviour
 {
     public int MovesLeft;
 
+    public int AttackPower;
+    public int AbilityPower;
+    public int HealingPower;
+
+    public int MaxHealth;
+
+    public int UnassignedPoints;
+
     // Start is called before the first frame update
     void Start()
     {

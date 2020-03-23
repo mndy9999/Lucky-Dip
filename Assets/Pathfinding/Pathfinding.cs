@@ -4,6 +4,24 @@ using System.Collections.Generic;
 
 public class Pathfinding : MonoBehaviour
 {
+	private bool mIsLookingAtMap;
+	public bool IsLookingAtMap
+	{
+		get
+		{
+			return mIsLookingAtMap;
+		}
+		set
+		{
+
+			mIsLookingAtMap = value;
+			if (!mIsLookingAtMap && !player.IsMoving)
+			{
+				TargetLocation = player.CurrentLocation;
+			}
+
+		}
+	}
 
 	public PlayerMovement player;
 	public PlayerStats playerStats;
@@ -19,12 +37,12 @@ public class Pathfinding : MonoBehaviour
 		}
 		private set
 		{
-			if (targetLocation != value)
-			{
+
 				ResetPathHighlights();
 				path = FindPath(player.CurrentLocation, value);
+				targetLocation = value;
 				UpdatePathHighlight();
-			}
+			
 		}
 	}
 
@@ -38,7 +56,7 @@ public class Pathfinding : MonoBehaviour
 				node.Visited = false;
 			}
 
-			targetLocation = path[path.Count-1];
+			//targetLocation = path[path.Count-1];
 		}
 	}
 
@@ -55,10 +73,9 @@ public class Pathfinding : MonoBehaviour
 
 	private List<Node> FindPath(Node startNode, Node targetNode)
 	{
-		Debug.Log("Looking for path");
-		if (startNode == targetNode)
+		if (startNode == targetNode || !mIsLookingAtMap)
 		{
-			return new List<Node>() { };
+			return new List<Node>();
 		}
 
 		List<Node> openSet = new List<Node>();
@@ -104,7 +121,7 @@ public class Pathfinding : MonoBehaviour
 				}
 			}
 		}
-		return new List<Node>() { };
+		return new List<Node>();
 	}
 
 	private List<Node> RetracePath(Node startNode, Node endNode)
@@ -141,7 +158,6 @@ public class Pathfinding : MonoBehaviour
 
 	public void Start()
 	{
-		path = new List<Node>();
 		TargetLocation = player.CurrentLocation;
 	}
 
