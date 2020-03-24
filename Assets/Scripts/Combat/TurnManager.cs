@@ -6,7 +6,7 @@ using TMPro;
 public class TurnManager : MonoBehaviour
 {
     
-    List<Button> controls;
+    //List<Button> controls;
     public Card pickedCard;
     
     public static int playerHp = 12;
