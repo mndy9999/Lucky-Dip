@@ -228,7 +228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: new text
 --- !u!1 &8735921877917610404
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086d7c3d5a37dac488428b0f0cae26eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: aac7164b9a9c822448c8f43886d3705c, type: 2}
+  cards: []
+  isInWorldScene: 0
   nameText: {fileID: 8735921877170643215}
   descriptionText: {fileID: 8735921876934278222}
   artworkImage: {fileID: 8735921876922000749}
