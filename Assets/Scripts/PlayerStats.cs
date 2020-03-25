@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour
     public int HealingPower;
 
     public int MaxHealth;
+    public static int CurrentHealth;
 
     public int UnassignedPoints;
 
@@ -38,9 +39,9 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    void Start()
     {
-        
+        CurrentHealth = MaxHealth;
     }
 }
