@@ -28,6 +28,23 @@ public class Node : MonoBehaviour
 
 	public bool SteppedOn;
 
+	private bool mCollected;
+	public bool Collected
+	{
+		get
+		{
+			return mCollected;
+		}
+		set
+		{
+			mCollected = value;
+			if (mCollected)
+			{
+				baseColour = Color.grey;
+			}
+		}
+	}
+
 	public Vector3 WorldPosition;
 
 	private Color baseColour;
@@ -40,6 +57,7 @@ public class Node : MonoBehaviour
 	{
 		GetComponent<Renderer>().material.color = Color.white;
 	}
+
 
 	private void Start()
 	{

@@ -132,7 +132,6 @@ public class Pathfinding : MonoBehaviour
 			path.Add(currentNode);
 			currentNode = currentNode.parent;
 		}
-
 		path.Reverse();
 		if(path.Count > 0 && path.Count > PlayerStats.Instance.MovesLeft)
 			path = path.GetRange(0, PlayerStats.Instance.MovesLeft);
@@ -145,9 +144,8 @@ public class Pathfinding : MonoBehaviour
 			return;
 
 		RaycastHit hit;
-		if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+		if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1<<8))
 		{
-			var mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
 			if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Tile"))
 			{
 				TargetLocation = hit.collider.gameObject.GetComponent<Node>();

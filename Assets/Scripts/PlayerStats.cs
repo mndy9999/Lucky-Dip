@@ -26,10 +26,57 @@ public class PlayerStats : MonoBehaviour
 
     public int UnassignedPoints;
 
+    private bool mDoubleDamage;
+    public bool DoubleDamage
+    {
+        get
+        {
+            return mDoubleDamage;
+        }
+        set
+        {
+            if (mDoubleDamage == value)
+                return;
+            if (value)
+            {
+                AttackPower *= 2;
+                AbilityPower *= 2;
+            }
+            else
+            {
+                AttackPower /= 2;
+                AbilityPower /= 2;
+            }
+        }
+    }
+
+    private bool mDoubleHealth;
+    public bool DoubleHealth
+    {
+        get
+        {
+            return mDoubleHealth;
+        }
+        set
+        {
+            if (mDoubleHealth == value)
+                return;
+            if (value)
+            {
+                MaxHealth *= 2;
+            }
+            else
+            {
+                MaxHealth /= 2;
+            }
+            
+        }
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
-        MovesLeft = 10;
+        MovesLeft = 2;
         AttackPower = 1;
         AbilityPower = 1;
         HealingPower = 1;
@@ -38,9 +85,4 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

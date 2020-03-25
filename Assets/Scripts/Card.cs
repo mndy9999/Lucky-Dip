@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewCard", menuName = "Card")]
+[CreateAssetMenu(fileName = "NewCard", menuName= "Card")]
 public class Card : ScriptableObject
 {
     public string Name;
@@ -13,7 +11,29 @@ public class Card : ScriptableObject
     public int RollMed;
     public int RollHigh;
 
-    public CardTypes CardType;
+    public GameObject Enemy;
 
-    public enum CardTypes { Attack, Ability, Healing, RideOrDie, Unknown};
+    public CardTypes CardType;
 }
+
+public enum CardTypes { Unknown, Attack, Ability, Healing, RideOrDie, SkipTurn, LeaveBattle, DoubleDamage, DoubleHealth };
+
+// Define an extension method in a non-nested static class.
+public static class Extensions
+{
+    public static bool IsEnemyCard(this CardTypes type)
+    {
+        switch (type)
+        {
+            case CardTypes.Attack:
+            case CardTypes.Ability:
+            case CardTypes.Healing:
+            case CardTypes.RideOrDie:
+                return true;
+            default:
+                return false;
+        }
+}
+    }
+
+
