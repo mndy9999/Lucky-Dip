@@ -20,6 +20,6 @@ public class EnemyStats : MonoBehaviour
     }
     private void EnemyTurn2(){ 
         turnManager.CardSeleted(EnemyCard);
-        print(EnemyCard);
+        //print(EnemyCard);
     }
 }

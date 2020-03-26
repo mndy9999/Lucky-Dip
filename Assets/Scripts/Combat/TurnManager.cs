@@ -35,6 +35,8 @@ public class TurnManager : MonoBehaviour
 
     public void CardSeleted(CardDisplay Card)
     {
+        Card.ReplaceCard();
+        
         int self=0, foe=0;
           
         diceRoll = Random.Range(1,7);

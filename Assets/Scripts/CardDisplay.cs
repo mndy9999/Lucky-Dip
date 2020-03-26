@@ -56,6 +56,12 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         UpdateText();
     }
 
+    public void ReplaceCard()
+    {
+        activeCard = cards[Random.Range(1, cards.Count)];
+        UpdateText();
+    }
+
     void UpdateText()
     {
 
