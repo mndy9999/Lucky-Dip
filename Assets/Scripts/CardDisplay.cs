@@ -96,7 +96,7 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     void Update()
     {
         if(!isInWorldScene)
-            transform.position = Vector3.MoveTowards(transform.position, position, 2);
+            transform.position = Vector3.MoveTowards(transform.position, position, 7);
 
     }
 }

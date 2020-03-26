@@ -23,9 +23,17 @@ public class PlayerStats : MonoBehaviour
     public int HealingPower;
 
     public int MaxHealth;
-    public static int CurrentHealth;
 
     public int UnassignedPoints;
+
+    [HideInInspector]
+
+    public static int SAttackPower;
+    public static int SAbilityPower;
+    public static int SHealingPower;
+    public static int SMaxHealth;
+    public static int SCurrentHealth;
+     
 
     // Start is called before the first frame update
     void Awake()
@@ -37,11 +45,19 @@ public class PlayerStats : MonoBehaviour
         MaxHealth = 20;
         UnassignedPoints = 10;
 
+        
+        SAttackPower = AttackPower;
+        SAbilityPower = AbilityPower;
+        SHealingPower = HealingPower;
+        SMaxHealth = MaxHealth;
+        SCurrentHealth = SMaxHealth;
+
+
     }
 
-    
-    void Start()
+    // Update is called once per frame
+    void Update()
     {
-        CurrentHealth = MaxHealth;
+        
     }
 }
