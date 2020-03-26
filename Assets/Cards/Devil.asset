@@ -20,3 +20,4 @@ MonoBehaviour:
   RollHigh: 0
   Enemy: {fileID: 8697998136216881896, guid: acad906658380ce4ab44712f780d82a3, type: 3}
   CardType: 2
+  BonusPoints: 6

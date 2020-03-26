@@ -44,5 +44,10 @@ public class CardPackUIManager : MonoBehaviour
         UpdateInventory();
     }
 
+    void Update()
+    {
+        UpdateInventory();
+    }
+
 
 }

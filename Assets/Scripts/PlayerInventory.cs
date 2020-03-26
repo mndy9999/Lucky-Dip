@@ -28,4 +28,12 @@ public class PlayerInventory : MonoBehaviour
     {
         AvailablePowerups.Add(powerup);
     }
+
+    public void RemoveCard(Card card)
+    {
+        AvailableCards.Remove(card);
+    }
+
+
+
 }

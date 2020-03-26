@@ -16,6 +16,8 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public int CurrentHealth;
+
     public int MovesLeft;
 
     public int AttackPower;
@@ -82,6 +84,23 @@ public class PlayerStats : MonoBehaviour
         HealingPower = 1;
         MaxHealth = 20;
         UnassignedPoints = 10;
+
+    }
+
+    public int GetExtraPower(CardTypes card)
+    {
+        switch (card)
+        {
+
+            case CardTypes.Attack:
+                return AttackPower;
+            case CardTypes.Ability:
+                return AbilityPower;
+            case CardTypes.Healing:
+                return HealingPower;
+            default:
+                return 0;
+        }
 
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class CardDisplay : MonoBehaviour
 {
 
     public GameObject trashCan;
@@ -91,43 +91,6 @@ public class CardDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             transform.position = Input.mousePosition + new Vector3(-1, 1);
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (Input.GetMouseButton(0) || ActiveCard.CardType == CardTypes.Unknown || GameManager.Instance.IsCollecting)
-            return;
-        transform.SetAsLastSibling();
-        position = defaultPosition + Vector3.up * 70;
-        scale = defaultScale * 1.5f;
-        transform.localScale = scale;
-    }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (Input.GetMouseButton(0) || ActiveCard.CardType == CardTypes.Unknown)
-            return;
-        position = defaultPosition;
-        scale = defaultScale;
-        transform.localScale = scale;
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (ActiveCard.CardType == CardTypes.Unknown)
-            return;
-        GameManager.Instance.IsDragging = isDragging = true;
-        transform.GetComponent<RectTransform>().pivot = new Vector2(1.0f, 0.0f);
-        transform.localScale = defaultScale * 0.5f;
-
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        transform.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
-        if (GameManager.Instance.IsInWorldScene && trashCan.GetComponent<TrashCanHovered>().Hovered && PlayerInventory.Instance.AvailableCards.Count > 3)
-            ActiveCard.CardType = CardTypes.Unknown;
-        GameManager.Instance.IsDragging = isDragging = false;
-        transform.position = defaultPosition;
-        transform.localScale = defaultScale;
-    }
 
 }

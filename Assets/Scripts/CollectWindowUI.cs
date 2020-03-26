@@ -38,7 +38,7 @@ public class CollectWindowUI : MonoBehaviour
         tile = GameManager.Instance.PlayerTilePosition.GetComponent<TileManager>();
         
         Card = tile.TileCard;
-        BonusPoints = tile.BonusPoints;
+        BonusPoints = Card.BonusPoints;
 
         TileCard = tile.TileCard.CardType.IsEnemyCard() ? EnemyCard : PowerupCard;
         TileButton = tile.TileCard.CardType.IsEnemyCard() ? tile.CanCollect ? CollectButton : FightButton : CollectButton;

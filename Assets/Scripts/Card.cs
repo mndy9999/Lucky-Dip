@@ -14,6 +14,21 @@ public class Card : ScriptableObject
     public GameObject Enemy;
 
     public CardTypes CardType;
+
+    public int BonusPoints;
+
+    public int GetCardDamage(int roll)
+    {
+        if (roll < 3)
+            return RollLow;
+        if (roll < 5)
+            return RollMed;
+        if (roll < 7)
+            return RollHigh;
+        else
+            return 0;
+    }
+
 }
 
 public enum CardTypes { Unknown, Attack, Ability, Healing, RideOrDie, SkipTurn, LeaveBattle, DoubleDamage, DoubleHealth };
@@ -33,7 +48,10 @@ public static class Extensions
             default:
                 return false;
         }
-}
     }
+
+
+
+   }
 
 
