@@ -40,7 +40,7 @@ public class PlayCardController : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) || activeCard.CardType == CardTypes.Unknown || isDragging)
+        if (Input.GetMouseButton(0) || !activeCard.Discovered || isDragging)
             return;
         transform.SetAsLastSibling();
         position = defaultPosition + Vector3.up * 70;
@@ -50,7 +50,7 @@ public class PlayCardController : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) || activeCard.CardType == CardTypes.Unknown || isDragging)
+        if (Input.GetMouseButton(0) || !activeCard.Discovered || isDragging)
             return;
         position = defaultPosition;
         scale = defaultScale;
@@ -59,7 +59,7 @@ public class PlayCardController : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (activeCard.CardType == CardTypes.Unknown)
+        if (!activeCard.Discovered)
             return;
         isDragging = true;
         transform.GetComponent<RectTransform>().pivot = new Vector2(1.0f, 0.0f);

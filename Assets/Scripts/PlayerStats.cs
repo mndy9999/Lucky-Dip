@@ -87,21 +87,4 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-    public int GetExtraPower(CardTypes card)
-    {
-        switch (card)
-        {
-
-            case CardTypes.Attack:
-                return AttackPower;
-            case CardTypes.Ability:
-                return AbilityPower;
-            case CardTypes.Healing:
-                return HealingPower;
-            default:
-                return 0;
-        }
-
-    }
-
 }

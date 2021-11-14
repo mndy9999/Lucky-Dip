@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CardDisplay : MonoBehaviour
 {
-
     public GameObject trashCan;
     public Card UnknownCard;
 
@@ -59,27 +58,21 @@ public class CardDisplay : MonoBehaviour
         descriptionText.text = mActiveCard.Description;
         artworkImage.sprite = mActiveCard.Artwork;
 
-        string desc;
-        switch (mActiveCard.CardType)
+        if(mActiveCard is BattleCard)
         {
-            case CardTypes.Attack:
+            var desc = "";
+            if(mActiveCard is AttackCard)
                 desc = "Roll {0}-{1}: Deal {2} Attack Damage";
-                break;
-            case CardTypes.Ability:
+            else if(mActiveCard is AbilityCard)
                 desc = "Roll {0}-{1}: Deal {2} Magic Damage";
-                break;
-            case CardTypes.Healing:
+            else if(mActiveCard is HealCard)
                 desc = "Roll {0}-{1}: Heal {2} Points";
-                break;
-            default:
-                desc = "";
-                break;
+
+            var c = mActiveCard as BattleCard;
+            RollLow.text = string.Format(desc, "1", "2", c.RollLow.ToString());
+            RollMed.text = string.Format(desc, "3", "4", c.RollMed.ToString());
+            RollHigh.text = string.Format(desc, "5", "6", c.RollHigh.ToString());
         }
-
-
-        RollLow.text = string.Format(desc, "1", "2", mActiveCard.RollLow.ToString());
-        RollMed.text = string.Format(desc, "3", "4", mActiveCard.RollMed.ToString());
-        RollHigh.text = string.Format(desc, "5", "6", mActiveCard.RollHigh.ToString());
     }
 
     // Update is called once per frame

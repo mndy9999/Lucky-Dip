@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Boardom
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 00a7f15aa90a1da47ba7eb6a9cd3bb60, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

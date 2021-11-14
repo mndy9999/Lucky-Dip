@@ -17,11 +17,11 @@ public class PowerupsUIController : MonoBehaviour
 
     // Update is called once per frame
     public void UpdateGems()
-    {
-        var skipTurn = PlayerInventory.Instance.AvailablePowerups.Count(a => a.CardType == CardTypes.SkipTurn);
-        var leaveBattle = PlayerInventory.Instance.AvailablePowerups.Count(a => a.CardType == CardTypes.LeaveBattle);
-        var doubleDamage = PlayerInventory.Instance.AvailablePowerups.Count(a => a.CardType == CardTypes.DoubleDamage);
-        var doubleHealth = PlayerInventory.Instance.AvailablePowerups.Count(a => a.CardType == CardTypes.DoubleHealth);
+    { 
+        var skipTurn = PlayerInventory.Instance.AvailablePowerups.Count(a => a is SkipTurnCard);
+        var leaveBattle = PlayerInventory.Instance.AvailablePowerups.Count(a => a is LeaveBattleCard);
+        var doubleDamage = PlayerInventory.Instance.AvailablePowerups.Count(a => a is DoubleDamageCard);
+        var doubleHealth = PlayerInventory.Instance.AvailablePowerups.Count(a => a is DoubleHealthCard);
 
         SkipTurnGem.text = skipTurn.ToString();
         LeaveBattleGem.text = leaveBattle.ToString();

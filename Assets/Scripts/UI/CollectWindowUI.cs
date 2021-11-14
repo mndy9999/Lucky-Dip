@@ -40,8 +40,8 @@ public class CollectWindowUI : MonoBehaviour
         Card = tile.TileCard;
         BonusPoints = Card.BonusPoints;
 
-        TileCard = tile.TileCard.CardType.IsEnemyCard() ? EnemyCard : PowerupCard;
-        TileButton = tile.TileCard.CardType.IsEnemyCard() ? tile.CanCollect ? CollectButton : FightButton : CollectButton;
+        TileCard = Card is BattleCard ? EnemyCard : PowerupCard;
+        TileButton = Card is BattleCard ? tile.CanCollect ? CollectButton : FightButton : CollectButton;
 
 
         TileButton.SetActive(true);
@@ -90,7 +90,7 @@ public class CollectWindowUI : MonoBehaviour
 
     public void Fight()
     {
-        GameManager.Instance.Enemy = Card.Enemy;
+        GameManager.Instance.Enemy = (BattleCard)Card.Enemy;
         GameManager.Instance.LoadBattleScene();
     }
 

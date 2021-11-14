@@ -17,7 +17,7 @@ public class TileManager : MonoBehaviour
     {
         get
         {
-            return TileCard.CardType.IsEnemyCard();
+            return TileCard is BattleCard;
         }
     }
 

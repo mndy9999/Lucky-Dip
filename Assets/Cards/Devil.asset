@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Devil
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 38aa9d5255eb3ea4ea92f9e66d2efb4e, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

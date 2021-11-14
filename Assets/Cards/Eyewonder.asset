@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Eye Wonder
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: a5ee48f388bf819489c24515be4fe8fe, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

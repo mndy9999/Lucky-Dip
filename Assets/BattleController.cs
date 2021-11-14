@@ -13,7 +13,6 @@ public class BattleController : MonoBehaviour
     public Card playerCard;
 
     public EnemyBattleAI enemyAI;
-    public EnemyStats enemyStats;
 
     public CardsAreaUIController playerCardsArea;
     public CardsAreaUIController enemyCardsArea;
@@ -78,15 +77,6 @@ public class BattleController : MonoBehaviour
         var playerRoll = Roll();
         var enemyRoll = Roll();
 
-        if (enemyCard.CardType != CardTypes.Healing)
-            PlayerStats.Instance.CurrentHealth -= (enemyCard.GetCardDamage(enemyRoll) + enemyStats.GetExtraPower(enemyCard.CardType));
-        else
-            enemyStats.CurrentHealth += (enemyCard.GetCardDamage(enemyRoll) + enemyStats.GetExtraPower(enemyCard.CardType));
-
-        if (playerCard.CardType != CardTypes.Healing)
-            enemyStats.CurrentHealth -= (playerCard.GetCardDamage(playerRoll) + PlayerStats.Instance.GetExtraPower(playerCard.CardType));
-        else
-            PlayerStats.Instance.CurrentHealth += (playerCard.GetCardDamage(playerRoll) + PlayerStats.Instance.GetExtraPower(playerCard.CardType));
 
         StartCoroutine(ResetCardsCoroutine());
     }

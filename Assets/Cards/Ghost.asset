@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Spam Ghost
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 08fbd6780bc4d6042b1c13b8fe2f121e, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

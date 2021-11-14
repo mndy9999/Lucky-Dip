@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Assassin Chaki
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 23d23a0d424dc2946a00547a6d57add0, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

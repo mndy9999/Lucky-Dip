@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pumpkid
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: bbe7c1c2ff84bc949a72e5370238e790, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0

@@ -31,7 +31,7 @@ public class CardDisplayInventory : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) || activeCard.CardType == CardTypes.Unknown || GameManager.Instance.IsCollecting)
+        if (Input.GetMouseButton(0) || !activeCard.Discovered || GameManager.Instance.IsCollecting)
             return;
         transform.SetAsLastSibling();
         position = defaultPosition + Vector3.up * 70;
@@ -41,7 +41,7 @@ public class CardDisplayInventory : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) || activeCard.CardType == CardTypes.Unknown)
+        if (Input.GetMouseButton(0) || !activeCard.Discovered)
             return;
         position = defaultPosition;
         scale = defaultScale;
@@ -50,7 +50,7 @@ public class CardDisplayInventory : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (activeCard.CardType == CardTypes.Unknown)
+        if (!activeCard.Discovered)
             return;
         GameManager.Instance.IsDragging = isDragging = true;
         transform.GetComponent<RectTransform>().pivot = new Vector2(1.0f, 0.0f);

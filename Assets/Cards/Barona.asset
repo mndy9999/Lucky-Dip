@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Barona
   Description: 
-  Artwork: {fileID: 0}
+  Artwork: {fileID: 21300000, guid: 6a295041a20cd914f86edcd92de424fd, type: 3}
   RollLow: 0
   RollMed: 0
   RollHigh: 0
